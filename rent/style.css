@@ -1,0 +1,29 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.all{
+    max-width: 1700px;
+    margin: auto;
+  
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.links{
+    margin: 25px;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 20px;
+}
+.login{
+    border: 2px solid ;
+    background-color: orangered;
+    padding: 10px;
+}

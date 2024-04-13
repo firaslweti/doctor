@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+            color: white;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: orangered;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2em;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: auto;
+            color: #333;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .login {
+            border: 2px solid orangered;
+            background-color: orangered;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .links a {
+                margin: 10px 0;
+            }
+
+            .login {
+                margin-top: 10px;
+            }
+        }
+        .car-slider {
+            margin: 40px 0;
+        }
+
+        .swiper-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            width: 150px; 
+            margin-right: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .swiper-slide img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .car-details {
+            padding-top: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: auto;
+            font-size: 30px;
+        }
+
+        .car-details h2 {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+            font-size: 30px;
+        }
+
+        .car-details p {
+            margin: 5px 0 0;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Car Mark Styling */
+        .car-mark {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .car-mark img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .car-mark h2 {
+            font-size: 18px;
+            margin: 10px 0 0;
+            color: #333;
+        }
+
+        .logos {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-item {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+       /* Logos Styling */
+.logo-item {
+    text-align: center;
+  
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 60px
+}
+
+.logo-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    filter: grayscale(100%) hue-rotate(120deg); /* Apply an orangered hue */
+    transition: filter 0.3s;
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%) hue-rotate(0deg); /* Remove grayscale and reset hue */
+}
+
+.logo-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+
+        .logo-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Rent</h1>
+            </div>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#">Rent</a>
+                <a href="#">Contact</a>
+                <a href="#" class="login">Login</a>
+            </div>
+        </nav>
+    </div>
+  
+
+    <header class="hero">
+        <img src="img/PON.png" alt="Hero Image">
+        <div class="hero-content">
+            <h1>Welcome to Rent</h1>
+            <p>Find the perfect space for your needs. We make renting easy and convenient.</p>
+            <a href="#" class="login">Get Started</a>
+        </div>
+    </header>
+    <hr>
+    <section class="swiper-container car-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/1.png" alt="Car 1">
+                <div class="car-details">
+                    <h2>Lexus SUV</h2>
+                    <p><a href="#" class="login">Discover this Car</a></p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/2.png" alt="Car 2">
+                <div class="car-details">
+                    <h2>Car Model 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/3.png" alt="Car 3">
+                <div class="car-details">
+                    <h2>Car Model 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/4.png" alt="Car 4">
+                <div class="car-details">
+                    <h2>Car Model 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/5.png" alt="Car 5">
+                <div class="car-details">
+                    <h2>Car Model 5</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img/6.png" alt="Car 6">
+                <div class="car-details">
+                    <h2>Car Model 6</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+   <div class="all-marks" style="max-width: 1000px; margin: auto;">
+    <section class="car-mark">
+        <hr>
+        <h2>Car Mark</h2>
+    </section>
+
+    <!-- Logos Section -->
+    <section class="logos">
+        <div class="logo-item">
+            <img src="img/lo1.webp" alt="Logo 1">
+            
+        </div>
+        <div class="logo-item">
+            <img src="img/lo2.webp" alt="Logo 2">
+            
+        </div>
+        <div class="logo-item">
+            <img src="img/lo3.webp" alt="Logo 3">
+            
+        </div>
+        <div class="logo-item">
+            <img src="img/lo4.webp" alt="Logo 4">
+            
+        </div>
+        <div class="logo-item">
+            <img src="img/lo5.webp" alt="Logo 5">
+           
+        </div>
+        <div class="logo-item">
+            <img src="img/lo6.webp" alt="Logo 6">
+            
+        </div>
+        <div class="logo-item">
+            <img src="img/lo7.webp" alt="Logo 6">
+            
+        </div>
+        <div class="logo-item">
+            <img src="img/lo8.webp" alt="Logo 6">
+            
+        </div>
+        <div class="logo-item">
+            <img src="img/lo9.webp" alt="Logo 6">
+            
+        </div>
+    </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>
